@@ -14,9 +14,8 @@ export default {
     { file: pkg.main, format: 'cjs', sourcemap: !isProd }
   ],
   external: id => [
-    '@kuen',
+    'rxjs',
     '@babel/runtime',
-    'lodash'
   ].some(s => id.includes(s)),
   plugins: [
     VuePlugin(),

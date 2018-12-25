@@ -3578,6 +3578,11 @@ vue-eslint-parser@^4.0.2:
     esquery "^1.0.1"
     lodash "^4.17.11"
 
+vue-rx@^6.0.1:
+  version "6.0.1"
+  resolved "http://registry.npm.taobao.org/vue-rx/download/vue-rx-6.0.1.tgz#4e4e9234339cbfa4e1968d67595cfe00293c6edc"
+  integrity sha1-Tk6SNDOcv6Thlo1nWVz+ACk8btw=
+
 vue-template-compiler@^2.5.21:
   version "2.5.21"
   resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.5.21.tgz#a57ceb903177e8f643560a8d639a0f8db647054a"
