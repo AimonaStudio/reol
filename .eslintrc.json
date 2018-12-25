@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
+  "rules": {
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "vue/name-property-casing": "off",
+    "vue/component-name-in-template-casing": "off"
+  }
+}
