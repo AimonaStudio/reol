@@ -1,19 +1,10 @@
-import Vue from 'vue'
-import VueRx from 'vue-rx'
-import Rx from 'rxjs/Rx'
+import app from './core/core'
 
-Vue.use(VueRx, Rx)
+// todo
+class Reol {
+  constructor (conf = {}) {
+    const { rooms, scripts, } = conf
+  }
+}
 
-const app = new Vue({
-  el: '#app',
-
-  data: () => ({
-    isLoaded: document.readyState === 'complete'
-  })
-
-})
-
-app.isLoaded || window.addEventListener('load', () => {
-  app.isLoaded = true
-  console.log('reol loaded.')
-})
+export default Reol

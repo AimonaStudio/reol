@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import alias from 'rollup-plugin-alias'
 import VuePlugin from 'rollup-plugin-vue'
 
 // local config
@@ -19,6 +20,9 @@ export default {
   ].some(s => id.includes(s)),
   plugins: [
     VuePlugin(),
+    alias({
+      '@': './src'
+    }),
     resolve({
       jsnext: true,
       main: true,
