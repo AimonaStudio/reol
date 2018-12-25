@@ -1,5 +1,5 @@
 {
-  "name": "reol",
+  "name": "reol-engine",
   "version": "0.0.1",
   "description": "word game framework based on rxjs, vue.js",
   "source": "src/index.js",
