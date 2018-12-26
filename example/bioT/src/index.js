@@ -1,4 +1,5 @@
-import { Reol } from '../../../dist'
+// todo
+import { Reol } from 'reol'
 
 const reol = new Reol()
 

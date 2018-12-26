@@ -1,6 +1,11 @@
 {
-  "description": "example",
-  "main": "src/index.js",
+  "private": true,
+  "source": "src/index.js",
+  "main": "dist/index.js",
   "author": "himself65",
-  "private": true
+  "scripts": {},
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.2"
+  }
 }
