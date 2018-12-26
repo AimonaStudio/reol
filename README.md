@@ -1,10 +1,12 @@
 # REOL-ENGINE
 
-> 自制文字游戏框架，基于 `Rxjs` 与 `Vue` 编写
+[![Build Status](https://travis-ci.com/AimonaStudio/reol.svg?branch=master)](https://travis-ci.com/AimonaStudio/reol)
+
+> 自制文字游戏框架，基于 `Vue` 和 `StoryScript`<sup>扩展版</sup> 编写
 
 ## Doc
 
-see [doc](docs/README.md)
+引擎思路请看 [doc](docs/README.md)
 
 ## Usage
 
