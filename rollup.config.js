@@ -2,7 +2,10 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import alias from 'rollup-plugin-alias'
+import { uglify } from 'rollup-plugin-uglify'
 import VuePlugin from 'rollup-plugin-vue'
+
+import path from 'path'
 
 // local config
 import pkg from './package.json'
@@ -21,7 +24,8 @@ export default {
   plugins: [
     VuePlugin(),
     alias({
-      '@': './src'
+      '@': path.resolve(__dirname, './src'),
+      '~@': path.resolve(__dirname, './node_modules')
     }),
     resolve({
       jsnext: true,
@@ -34,9 +38,11 @@ export default {
     }),
     commonjs({
       include: 'node_modules/**'
-    })
+    }),
+    isProd && uglify()
   ],
   watch: {
-    include: 'src/**'
+    include: 'src/**',
+    exclude: 'node_modules/**'
   }
 }
