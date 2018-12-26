@@ -2,7 +2,7 @@ module.exports = {
   verbose: false,
   roots: [
     '<rootDir>/src',
-    '<rootDir>/tests/unit'
+    '<rootDir>/tests'
   ],
   moduleFileExtensions: [
     "js",
@@ -12,17 +12,16 @@ module.exports = {
   moduleNameMapper: {
     '^@/test$': '<rootDir>/test/index.js',
     '^@/test/(.*)$': '<rootDir>/test/$1',
-    '^reol/(.*)$': '<rootDir>/src/$1',
-    "^vue$": "vue/dist/vue.common.js"
+    '^reol/(.*)$': '<rootDir>/src/$1'
   },
   transform: {
     "\\.(js)$": "babel-jest"
   },
+  transformIgnorePatterns: ['node_modules'],
   collectCoverageFrom: [
     "src/**/*.{js}",
     "!**/node_modules/**",
     "!**/*.d.ts"
   ],
-  coverageDirectory: "coverage",
-  testEnvironment: "node",
+  coverageDirectory: "coverage"
 }

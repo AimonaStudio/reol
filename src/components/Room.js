@@ -1,13 +1,9 @@
 import { idMaker } from "../utils"
 
 export default function Room (target) {
-  target._id = idMaker()
-  const t = target.created() // todo
-  const roomName = target.name || `${target._id}-Room`
-  return {
-    name: roomName,
-    render () {
-      return (t)
-    }
+  target.prototype._id = idMaker().next().value
+  target.prototype.name = target.name || `${target._id}Room`
+  target.prototype.render = (h) => {
+    return h(target.created())
   }
 }

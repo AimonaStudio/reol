@@ -81,6 +81,17 @@
     "@babel/traverse" "^7.1.0"
     "@babel/types" "^7.0.0"
 
+"@babel/helper-create-class-features-plugin@^7.2.3":
+  version "7.2.3"
+  resolved "http://registry.npm.taobao.org/@babel/helper-create-class-features-plugin/download/@babel/helper-create-class-features-plugin-7.2.3.tgz#f6e719abb90cb7f4a69591e35fd5eb89047c4a7c"
+  integrity sha1-9ucZq7kMt/SmlZHjX9XriQR8Snw=
+  dependencies:
+    "@babel/helper-function-name" "^7.1.0"
+    "@babel/helper-member-expression-to-functions" "^7.0.0"
+    "@babel/helper-optimise-call-expression" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-replace-supers" "^7.2.3"
+
 "@babel/helper-define-map@^7.1.0":
   version "7.1.0"
   resolved "http://registry.npm.taobao.org/@babel/helper-define-map/download/@babel/helper-define-map-7.1.0.tgz#3b74caec329b3c80c116290887c0dd9ae468c20c"
@@ -177,7 +188,7 @@
     "@babel/traverse" "^7.1.0"
     "@babel/types" "^7.0.0"
 
-"@babel/helper-replace-supers@^7.1.0":
+"@babel/helper-replace-supers@^7.1.0", "@babel/helper-replace-supers@^7.2.3":
   version "7.2.3"
   resolved "http://registry.npm.taobao.org/@babel/helper-replace-supers/download/@babel/helper-replace-supers-7.2.3.tgz#19970020cf22677d62b3a689561dbd9644d8c5e5"
   integrity sha1-GZcAIM8iZ31is6aJVh29lkTYxeU=
@@ -244,6 +255,15 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
 
+"@babel/plugin-proposal-decorators@^7.2.3":
+  version "7.2.3"
+  resolved "http://registry.npm.taobao.org/@babel/plugin-proposal-decorators/download/@babel/plugin-proposal-decorators-7.2.3.tgz#1fe5b0d22ce0c4418f225474ebd40267430364c0"
+  integrity sha1-H+Ww0izgxEGPIlR069QCZ0MDZMA=
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.2.3"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-decorators" "^7.2.0"
+
 "@babel/plugin-proposal-json-strings@^7.2.0":
   version "7.2.0"
   resolved "http://registry.npm.taobao.org/@babel/plugin-proposal-json-strings/download/@babel/plugin-proposal-json-strings-7.2.0.tgz#568ecc446c6148ae6b267f02551130891e29f317"
@@ -284,10 +304,24 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-syntax-decorators@^7.2.0":
+  version "7.2.0"
+  resolved "http://registry.npm.taobao.org/@babel/plugin-syntax-decorators/download/@babel/plugin-syntax-decorators-7.2.0.tgz#c50b1b957dcc69e4b1127b65e1c33eef61570c1b"
+  integrity sha1-xQsblX3MaeSxEntl4cM+72FXDBs=
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
 "@babel/plugin-syntax-json-strings@^7.2.0":
   version "7.2.0"
   resolved "http://registry.npm.taobao.org/@babel/plugin-syntax-json-strings/download/@babel/plugin-syntax-json-strings-7.2.0.tgz#72bd13f6ffe1d25938129d2a186b11fd62951470"
   integrity sha1-cr0T9v/h0lk4Ep0qGGsR/WKVFHA=
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-syntax-jsx@^7.2.0":
+  version "7.2.0"
+  resolved "http://registry.npm.taobao.org/@babel/plugin-syntax-jsx/download/@babel/plugin-syntax-jsx-7.2.0.tgz#0b85a3b4bc7cdf4cc4b8bf236335b907ca22e7c7"
+  integrity sha1-C4WjtLx830zEuL8jYzW5B8oi58c=
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
