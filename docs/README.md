@@ -6,24 +6,28 @@
 
 ```js
 // room1.js
-import { Room } from 'reol-engine'
-
-export class MainRoom extends Room {
-  created (reol) {
-    this.name = 'Welcome'
-    return (<Room>
-    <Title>{this.name}</Title>
-    <SelectTable>
-      <SelectTableItem click={reol.to('GameRoom')}>开始</SelectTableItem>
-      <SelectTableItem click={this.loadData()}>继续</SelectTableItem>
-      <SelectTableItem click={reol.to('SettingRoom')}>设置</SelectTableItem>
-      <SelectTableItem click={reol.exit()>推出</SelectTableItem>
-    </SelectTable>
-    </Room>)
-  }
-  
-  loadData () {
-    // ...
-  }
-}
+class MainRoom {
+   constructor (conf) {
+     const { dialog } = conf
+     this.name = 'MainRoom'   
+     this.dialog = dialog  // dialog 为生成器
+   }
+   
+   update () {
+ 
+   }
+ 
+   created () {
+     return (
+       <Screen>
+         <DialogTable>
+           <Dialog data={this.dialog.value} click={this.nextDialog()}></Dialog>
+         </DialogTable>
+       </Screen>)
+   }
+   
+   nextDialog () {
+     this.dialog.next()
+   }
+ }
 ```
