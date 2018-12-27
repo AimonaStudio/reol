@@ -1,12 +1,10 @@
+import Vue from 'vue'
+
 import { Reol } from 'reol/index'
 import { Room } from 'reol/components'
 
-@Room
+@Room('NoRoom')
 class MainRoom {
-  constructor (conf) {
-    this.name = 'MainRoom'
-  }
-
   mounted () {
     // this.on('click', loadScript())
   }
@@ -20,11 +18,18 @@ class MainRoom {
   }
 }
 
+const mainRoom = new MainRoom()
+
 it('reol should init success', () => {
-  const mainRoom = new MainRoom()
   expect(mainRoom._id).toBeDefined()
   expect(typeof mainRoom._id).toBe('number')
   expect(mainRoom._id).toBe(0) // First Created
 
-  expect(mainRoom.name).toBe('MainRoom')
+  expect(mainRoom.roomName).toBe('NoRoom')
+  expect(MainRoom.prototype.roomName).toBe('NoRoom')
+})
+
+it('should have MainRoom component', function () {
+  const MainRoomComponent = Vue.component(mainRoom.roomName)
+  expect(MainRoomComponent).toBeDefined()
 })
