@@ -22,8 +22,6 @@ jobs:
       script:
         - yarn run lint
         - yarn run test
-      after_success:
-        - codecov
     - stage: build
       name: 'Build test'
       script:
